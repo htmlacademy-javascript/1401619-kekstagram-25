@@ -1,4 +1,4 @@
-function countInteger (minNumber, maxNumber) {
+function randomIntegerFromRange (minNumber, maxNumber) {
   let min;
   let max;
 
@@ -8,18 +8,18 @@ function countInteger (minNumber, maxNumber) {
   if (minNumber > maxNumber) {
     min = maxNumber;
     max = minNumber;
-  } else {
-    min = minNumber;
-    max = maxNumber;
   }
   const random = min + Math.random() * (max + 1 - min);
   return Math.floor(random);
 }
 
-countInteger(1,2);
+randomIntegerFromRange(1,2);
 
 function lengthComment(text, maxLength) {
-  return text.length > maxLength ? false : true;
+
+  if (text.length > maxLength) {
+    return false;
+  }
 }
+
 lengthComment('это была сложная задача, но возможно я справился', 70);
-//Я подглядел решение тут https://learn.javascript.ru/task/random-int-min-max
