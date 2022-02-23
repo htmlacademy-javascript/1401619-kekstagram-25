@@ -18,7 +18,7 @@ randomIntegerFromRange(1,2);
 function lengthComment(text, maxLength) {
 
   if (text.length > maxLength) {
-    return false;
+    return text.length > maxLength;
   }
 }
 
