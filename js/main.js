@@ -16,10 +16,7 @@ function randomIntegerFromRange (minNumber, maxNumber) {
 randomIntegerFromRange(1,2);
 
 function lengthComment(text, maxLength) {
-
-  if (text.length > maxLength) {
-    return text.length > maxLength;
-  }
+  return text.length <= maxLength;
 }
 
 lengthComment('это была сложная задача, но возможно я справился', 70);
