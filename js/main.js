@@ -22,37 +22,9 @@ function lengthComment(text, maxLength) {
 lengthComment('это была сложная задача, но возможно я справился', 70);
 
 
-const PHOTO_ID = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
+const PHOTO_IDs = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
 
-const URL_OF_PICTURE = 'photos/{{i}}.jpg';
-
-const DESCRIPTIONS_OF_PHOTO = [
-  'Дом который построил Джек',
-  'Маски шоу',
-  'Операция Ы',
-  'Разумное, доброе, вечное и кошки',
-  'Апетитный хавчик',
-  'Асфальтоукладчик',
-  'Как же скучно я живу',
-  'Дикие коты',
-  'Пушкинская осень',
-  'Вечное сияние чистого разума',
-  'Тарас и Бульба',
-  'Овощебаза',
-  'Синхрофазатрон',
-  'Пердоманокль',
-  'Моя кошка',
-  'Вдруг как в сказке скрипнула дверь...',
-  'Бульбазавр',
-  'Это что за покемон?',
-  'То да сё, пятое десятое',
-  'Товарищи',
-  'Партия зовёт',
-  'Птичка упархнула',
-  'Шо то шо это',
-  'Ну ниче так',
-  'Косоглазие это не приговор',
-];
+const DESCRIPTIONS_OF_PHOTO = 'это описание фотографии';
 
 const COMMENTS_FROM_USERS = [
   'Всё отлично!',
@@ -93,18 +65,18 @@ const USER_NAMES = [
 ];
 
 
-const getRandomArrayElement = (elements) => ({
-  return (elements([randomIntegerFromRange(0, elements.length - 1)])
-})
+const getRandomArrayElement = (elements) => {
+  return elements[randomIntegerFromRange(0, elements.length - 1)];
+};
 
-const createComment = PHOTO_ID.map((id) => {
+const createComment = PHOTO_IDs.map((id) => {
   return {
-    id: PHOTO_ID[id],
-    url: 'photos/${id + 1}.jpg'
-    description: DESCRIPTIONS_OF_PHOTO[id],
+    id: PHOTO_IDs[id],
+    url: 'photos/' + (id + 1) + '.jpg'
+    description: DESCRIPTIONS_OF_PHOTO,
     likes: randomIntegerFromRange(15, 200),
     comments: {
-      id: PHOTO_ID[id],
+      id: PHOTO_IDs[id],
       avatar: 'img/avatar-'+ randomIntegerFromRange(1, 6) + '.svg',
       message: getRandomArrayElement(COMMENTS_FROM_USERS),
       name: getRandomArrayElement(USER_NAMES)
