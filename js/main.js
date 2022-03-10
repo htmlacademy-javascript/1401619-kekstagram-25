@@ -80,7 +80,5 @@ const generatePosts = (index) => ({
   url: `photos/${index + 1}.jpg`,
   description: DESCRIPTIONS_OF_PHOTO,
   likes: randomIntegerFromRange(15, 200),
-  comments: generateComments(),
+  comments: Array.from({length: randomIntegerFromRange(1, 15)}, generateComments),
 });
-
-const moсkPosts = Array.from({length: PHOTO_IDS}, generatePosts);
