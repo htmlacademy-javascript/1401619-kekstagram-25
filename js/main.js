@@ -21,9 +21,6 @@ function lengthComment(text, maxLength) {
 
 lengthComment('это была сложная задача, но возможно я справился', 70);
 
-
-const PHOTO_IDS = 25;
-
 const DESCRIPTIONS_OF_PHOTO = 'это описание фотографии';
 
 const COMMENTS_FROM_USERS = [
@@ -82,3 +79,5 @@ const generatePosts = (index) => ({
   likes: randomIntegerFromRange(15, 200),
   comments: Array.from({length: randomIntegerFromRange(1, 15)}, generateComments),
 });
+
+generatePosts();
