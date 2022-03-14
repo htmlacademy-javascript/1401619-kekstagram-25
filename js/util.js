@@ -13,8 +13,6 @@ function randomIntegerFromRange (minNumber, maxNumber) {
   return Math.floor(random);
 }
 
-randomIntegerFromRange(1,2);
-
 function lengthComment(text, maxLength) {
   return text.length >= maxLength;
 }

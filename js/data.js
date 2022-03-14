@@ -59,4 +59,4 @@ const generatePosts = (index) => ({
   comments: Array.from({length: randomIntegerFromRange(1, 15)}, generateComments),
 });
 
-export {getRandomArrayElement, generateComments, generatePosts};
+export {generatePosts};
